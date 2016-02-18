@@ -1,0 +1,12 @@
+* First scenario I want to test
+
+  - Setup 3 node cluster
+  - Set ha-policy to all
+  - Declare single exchange / queue for rpc
+  - Start substantial amount of RPC servers that consume from that queue (they should randomly connect to one node from cluster)
+  - Start substantial amount of RPC clients
+    - Connect to random server
+    - Declare private reply exchange / queue
+    - Send rpc-s with random delay
+  - Start some nemesis
+  - Start process which continiously does 'list_channels'

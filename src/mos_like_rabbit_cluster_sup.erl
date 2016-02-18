@@ -1,11 +1,11 @@
--module(amqp_load_sup).
+-module(mos_like_rabbit_cluster_sup).
 -behaviour(supervisor).
 
 -export([start_link/0]).
 -export([init/1]).
 
 start_link() ->
-	supervisor:start_link({local, ?MODULE}, ?MODULE, []).
+        supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 
 init([]) ->
 	Procs = [],
